@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
 }
 
 .form-ctn{
@@ -11,7 +10,7 @@
     border-radius: 10px;
     box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
     padding: 15px;
-    min-width: 20%;
+    max-width: 80%;
     max-height: fit-content;
 }
 
