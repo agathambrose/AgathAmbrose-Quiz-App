@@ -8,7 +8,6 @@
 
 .form-ctn{
     margin: 10px 0;
-    /* background-color: blueviolet; */
     border-radius: 10px;
     box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
     padding: 15px;
@@ -26,7 +25,6 @@ ul{
 
 .reg__phr{
     display: flex;
-    /* background-color: blue; */
     justify-content: center;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
@@ -40,7 +38,7 @@ ul{
 }
 
 .cls__sect{
-    display: flex;
+    display: inline-flex;
 }
 
 .first__nm, 
