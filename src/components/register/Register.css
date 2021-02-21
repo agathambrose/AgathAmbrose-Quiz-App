@@ -1,0 +1,116 @@
+.form__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.form-ctn{
+    margin: 10px 0;
+    /* background-color: blueviolet; */
+    border-radius: 10px;
+    box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
+    padding: 15px;
+    min-width: 20%;
+}
+
+ul{
+    list-style: none;
+}
+
+.lg__reg{
+    margin: 10px 0 40px 5px;
+    font-size: 1rem;
+}
+
+.reg__phr{
+    display: flex;
+    /* background-color: blue; */
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.head-reg__phr{
+    margin-bottom: 25px ;
+}
+
+.cls__sect{
+    display: flex;
+}
+
+.first__nm, 
+.last__nm,
+.input__area{
+    font-size: 18px;
+    font-family: inherit;
+    color: black;
+    background-color: rgb(231, 229, 229);
+    border: none;
+    border-radius: 3px;
+}
+
+.first__nm{
+    padding: 15px 2px;
+    margin-right: 6px;
+}
+
+.last__nm{
+    padding: 15px 2px;
+    margin-left: 6px;
+}
+
+.input__area{
+    margin-top: 25px;
+    padding: 15px 8px;
+    min-width: 100%;
+}
+
+.btn__s{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.create__acc,
+.reg__fb{
+    padding: 9px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    padding: 15px 8px;
+    cursor: pointer;
+}
+
+.create__acc{
+    background-color: rgba(6, 6, 43, 0.884);
+    min-width: 100%;
+}
+
+.reg__fb{
+    background-color: rgb(15, 15, 54);
+    min-width: 100%;
+}
+
+
+/* ________________TABLET VIEW____________ */
+@media only screen and (min-width: 600px){
+    .form__ctn{
+        min-width: 60%;
+    }
+}
+
+/* ________________DESKTOP VIEW____________ */
+@media only screen and (min-width: 748px){
+    .form__ctn{
+        min-width: 40%;
+    }
+}
