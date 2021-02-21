@@ -47,7 +47,6 @@ const Register = () => {
 
                                 <div>
                                     <div className = 'cls__sect'>
-                                        <div>
                                             <li>
                                                 <Field name='firstName'>
                                                     {({ field }) => 
@@ -59,9 +58,7 @@ const Register = () => {
                                                         <div style = {{color: 'red'}}>{errors.firstName}</div>
                                                     ) : null}
                                             </li>
-                                        </div>
                                         
-                                        <div>
                                             <li>
                                                 <Field name = 'lastName'>
                                                     {({field}) => 
@@ -72,11 +69,8 @@ const Register = () => {
                                                     <div style = {{color: 'red', marginLeft: '6px'}}>{errors.lastName}</div>
                                                 ) : null}
                                             </li>
-                                        </div>
                                     </div>
                                     
-                                    
-
                                     <div>
                                     <li>
                                     <Field name = 'email'>

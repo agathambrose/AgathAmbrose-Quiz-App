@@ -53,12 +53,12 @@ ul{
 }
 
 .first__nm{
-    padding: 15px 2px;
+    padding: 15px 0;
     margin-right: 6px;
 }
 
 .last__nm{
-    padding: 15px 2px;
+    padding: 15px 0;
     margin-left: 6px;
 }
 
