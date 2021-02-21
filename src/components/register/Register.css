@@ -39,7 +39,13 @@ ul{
 
 .cls__sect{
     display: flex;
+    justify-content: space-between;
     max-width: 100%;
+}
+
+.cls__sect li{
+    width: calc(50% - 7.5px);
+    padding-left: 6px;
 }
 
 .first__nm, 
@@ -55,12 +61,14 @@ ul{
 
 .first__nm{
     padding: 15px 0;
-    margin-right: 6px;
+    max-width: 100%;
+    /* margin-right: 6px; */
 }
 
 .last__nm{
     padding: 15px 0;
-    margin-left: 6px;
+    /* margin-left: 6px; */
+    max-width: 100%;
 }
 
 .input__area{
