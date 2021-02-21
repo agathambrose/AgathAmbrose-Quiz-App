@@ -1,4 +1,4 @@
-.form__container{
+.form__area{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -12,6 +12,7 @@
     box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
     padding: 15px;
     min-width: 20%;
+    max-height: fit-content;
 }
 
 ul{
@@ -38,7 +39,8 @@ ul{
 }
 
 .cls__sect{
-    display: inline-flex;
+    display: flex;
+    max-width: 100%;
 }
 
 .first__nm, 

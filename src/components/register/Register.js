@@ -17,7 +17,7 @@ const RegisterSchema = Yup.object().shape({
 
 const Register = () => {
     return (
-        <div className='form__container'>
+        <div className='form__area'>
             <Formik
                 initialValues = {{
                     firstName: '',
