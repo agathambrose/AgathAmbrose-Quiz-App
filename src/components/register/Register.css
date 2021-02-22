@@ -1,8 +1,10 @@
 .form__area{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
 .form-ctn{
@@ -11,7 +13,7 @@
     box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
     padding: 15px;
     max-width: 80%;
-    max-height: fit-content;
+    /* height: 80%; */
 }
 
 ul{
@@ -45,7 +47,6 @@ ul{
 
 .cls__sect li{
     width: calc(50% - 7.5px);
-    padding-left: 6px;
 }
 
 .first__nm, 
@@ -57,24 +58,20 @@ ul{
     background-color: rgb(231, 229, 229);
     border: none;
     border-radius: 3px;
+    padding: 15px 8px;
 }
 
 .first__nm{
-    padding: 15px 0;
     max-width: 100%;
-    /* margin-right: 6px; */
 }
 
 .last__nm{
-    padding: 15px 0;
-    /* margin-left: 6px; */
     max-width: 100%;
 }
 
 .input__area{
     margin-top: 25px;
-    padding: 15px 8px;
-    min-width: 100%;
+    width: 100%;
 }
 
 .btn__s{
@@ -95,16 +92,15 @@ ul{
     border: none;
     padding: 15px 8px;
     cursor: pointer;
+    min-width: 100%;
 }
 
 .create__acc{
     background-color: rgba(6, 6, 43, 0.884);
-    min-width: 100%;
 }
 
 .reg__fb{
-    background-color: rgb(15, 15, 54);
-    min-width: 100%;
+    background-color: rgb(25, 25, 87);
 }
 
 

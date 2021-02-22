@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Register.css'
 import { Logo } from '../logo/Logo'
-import './Register.css'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import { useDispatch } from 'react-redux'
+import { unwrapResult } from '@reduxjs/toolkit'
+import { registerUser } from '../redux/features/user/userSlice'
 
 
 const RegisterSchema = Yup.object().shape({
@@ -12,10 +14,31 @@ const RegisterSchema = Yup.object().shape({
     lastName: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required!'),
     email: Yup.string().email('Invalid email').required('Required'),
     password: Yup.string().min(6, 'Must be at least 6 characters long').required('Required!'),
-    confirm_password: Yup.string().oneOf([Yup.ref('password'), null], 'Password must be the same').required('Required!'),
+    password_confirmation: Yup.string().oneOf([Yup.ref('password'), null], 'Password must be the same').required('Required!'),
 });
 
+
+
 const Register = () => {
+    let dispatch = useDispatch();
+    const [isloading, setIsLoading] = useState(false);
+
+     const NEWREG = {
+        firstName: Formik.firstName,
+        lastName: Formik.lastName,
+        email: Formik.email,
+        password: Formik.password,
+        password_confirmation: Formik.password_confirmation
+    }
+
+    /* setIsLoading(true);
+    const response = dispatch(registerUser (NEWREG));
+        if (response.message){
+            alert ('Registration Successful!');
+            setIsLoading(false)
+        } */ 
+    
+
     return (
         <div className='form__area'>
             <Formik
@@ -24,11 +47,17 @@ const Register = () => {
                     lastName: '',
                     email: '',
                     password: '',
-                    confirm_password: '',
+                    password_confirmation: '',
                 }}
                 validationSchema = {RegisterSchema}
-                onSubmit = {values => {
-                    console.log(values);
+                onSubmit = { async (NEWREG) => {
+                    console.log(NEWREG);
+                    const resultAction = await dispatch(registerUser(NEWREG));
+                    unwrapResult(resultAction)
+
+
+                    //dispatch(registerUser(NEWREG));
+                   // alert(NEWREG)
                 }}
                 >
 
@@ -95,7 +124,7 @@ const Register = () => {
                                     </li>
 
                                     <li>
-                                    <Field name = 'confirm_password'>
+                                    <Field name = 'password_confirmation'>
                                         {({field}) =>
                                         <input {...field} type='password' placeholder='Confirm Password' className='input__area'/>
                                     }
@@ -107,13 +136,11 @@ const Register = () => {
                                     </div>
 
                                     <div className='btn__s'>
-                                        <Link to = '/QuizLandnPg'>
                                         <button type='submit'
                                         className='create__acc'>Create Account</button>
-                                        </Link>
 
                                         <a href = 'https://web.facebook.com'>
-                                            <button className='reg__fb'>Register with Facebook</button>
+                                            <button className='reg__fb' >Register with Facebook</button>
                                         </a>
                                         
                                     </div>

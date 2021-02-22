@@ -7,7 +7,7 @@ import * as Yup from 'yup'
 
 
 const LoginSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email address').required('required'),
+    email: Yup.string().email('Invalid email address').required('Required!'),
     password: Yup.string().min(6, 'Must be at least 6 characters long').required('Required!')
 })
 
@@ -46,7 +46,7 @@ const Login = () => {
                                     }
                                     </Field>
                                     {errors.email && touched.email ? (
-                                        <div style = {{color: 'red'}}>{errors.email}</div>
+                                        <div style = {{color: 'red', marginBottom: '10px'}}>{errors.email}</div>
                                     ) : null}
                                     </li>
                                     
