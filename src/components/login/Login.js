@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 import { Logo } from '../logo/Logo'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import { useDispatch } from 'react-redux'
+import { unwrapResult } from '@reduxjs/toolkit'
+import Spinner from 'react-bootstrap/Spinner'
+import { loginUser } from '../redux/features/user/userSlice'
+import { Toaster } from 'react-hot-toast'
+
 
 
 const LoginSchema = Yup.object().shape({
@@ -12,16 +18,27 @@ const LoginSchema = Yup.object().shape({
 })
 
 const Login = () => {
+    let dispatch = useDispatch();
+    
+    const [loginLoading, setLoginLoading] = useState(false);
+    const spinner = loginLoading ? <div><Spinner animation="border" variant="secondary" className='d-flex justify-content-center mx-auto'/></div> : null
+
     return (
         <div className='form_container'>
+            <Toaster position = 'top-center' reverseOrder = {false}/>
             <Formik
                 initialValues = {{
                     email: '',
                     password: '',
                 }}
                 validationSchema = { LoginSchema }
-                onSubmit = {values => {
-                    console.log(values);
+                onSubmit = {async (role) => {
+                    console.log(role);
+                    setLoginLoading(true);
+                    const resultAction = await dispatch(loginUser(role));
+                    unwrapResult(resultAction)
+                    setLoginLoading (false)
+                    
                 }}
             >
                 {({ errors, touched }) => (
@@ -63,9 +80,7 @@ const Login = () => {
                                 </div>
 
                                 <div className='btn_s'>
-                                    <Link to = '/QuizLandnPg'>
-                                        <button type='submit' className='lg_ac'>Login</button>
-                                    </Link>
+                                        <button type='submit' className='lg_ac'>Login {spinner} </button>
                                 </div>
 
                                 <div>

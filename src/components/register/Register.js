@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 import './Register.css'
 import { Logo } from '../logo/Logo'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { registerUser } from '../redux/features/user/userSlice'
+import Spinner from 'react-bootstrap/Spinner'
+
+
 
 
 const RegisterSchema = Yup.object().shape({
@@ -21,23 +24,11 @@ const RegisterSchema = Yup.object().shape({
 
 const Register = () => {
     let dispatch = useDispatch();
-    const [isloading, setIsLoading] = useState(false);
+    //const [regLoading, setRegLoading] = useState(false);
+    const { loading } = useSelector((state) => state.user);
+    // console.log(loading?"true":"false")
 
-     const NEWREG = {
-        firstName: Formik.firstName,
-        lastName: Formik.lastName,
-        email: Formik.email,
-        password: Formik.password,
-        password_confirmation: Formik.password_confirmation
-    }
-
-    /* setIsLoading(true);
-    const response = dispatch(registerUser (NEWREG));
-        if (response.message){
-            alert ('Registration Successful!');
-            setIsLoading(false)
-        } */ 
-    
+    const spinner = loading ? <div><Spinner animation="border" variant="secondary" className='d-flex justify-content-center mx-auto'/></div> : null
 
     return (
         <div className='form__area'>
@@ -53,11 +44,8 @@ const Register = () => {
                 onSubmit = { async (NEWREG) => {
                     console.log(NEWREG);
                     const resultAction = await dispatch(registerUser(NEWREG));
+                    //setRegLoading = (true);
                     unwrapResult(resultAction)
-
-
-                    //dispatch(registerUser(NEWREG));
-                   // alert(NEWREG)
                 }}
                 >
 
@@ -137,7 +125,7 @@ const Register = () => {
 
                                     <div className='btn__s'>
                                         <button type='submit'
-                                        className='create__acc'>Create Account</button>
+                                        className='create__acc'>Create Account {spinner}</button>
 
                                         <a href = 'https://web.facebook.com'>
                                             <button className='reg__fb' >Register with Facebook</button>

@@ -1,0 +1,113 @@
+.input__multi{
+    display: flex;
+    align-items: center;
+}
+
+.question__area,
+.options-area{
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.admin_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.options-area::placeholder{
+    border-bottom: 1px solid rgb(26, 25, 25);
+}
+
+.question__area::placeholder{
+    border-bottom: 1px solid rgb(26, 25, 25);
+}
+
+.question__area{
+    margin-right: 30px;
+    width: 54%;
+}
+
+.multi-choice{
+    background-color: whitesmoke;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* .btn__div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+} */
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    color: rgba(6, 6, 158, 0.562);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto' sans-serif;
+    background-color: rgba(255, 255, 255, 0.575);
+    padding: .9rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 7px 8px 2px;
+    outline: none;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(6, 6, 158, 0.562);
+}
+
+.tags_area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.icon-tag,
+.trashcan,
+.timer-icon{
+    display: flex;
+    align-items: center;
+    color: rgb(71, 71, 71);
+    font-size: 1.2rem;
+}
+
+
+/* _________________DESKTOP VIEW_______________ */
+@media only screen and (min-width: 768px){
+    .question__area{
+        width: 81%;
+    }
+    .multi-choice{
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* _________________DESKTOP VIEW_______________ */
+@media only screen and (min-width: 1024px){
+    .question__area{
+        width: 81%;
+    }
+    .multi-choice{
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}

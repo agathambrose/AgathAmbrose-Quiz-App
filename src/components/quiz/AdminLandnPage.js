@@ -2,9 +2,10 @@ import React from 'react'
 import './QuizLandnPg.css'
 import { Link } from 'react-router-dom'
 import { logUserout } from '../redux/features/user/userSlice'
+import './QuizLandnPg.css'
 import { useDispatch } from 'react-redux'
 
-const QuizLandnPg = () => {
+const AdminLandnPage = () => {
     const dispatch = useDispatch();
     return (
         <div className='wlkm__area'>
@@ -12,7 +13,7 @@ const QuizLandnPg = () => {
             <div className='abc411'>
                 <h2 className='wlkm_phr'>WELCOME !</h2>
 
-                <h4 className='quiz__lnk'>Click <Link to ='/quiz' style={{color: 'rgba(6, 6, 158, 0.562)'}}>Here</Link> To Begin Quiz</h4>
+                <h4 className='quiz__lnk'>Click <Link to ='/admin' style={{color: 'rgba(6, 6, 158, 0.562)'}}>Here</Link> To Set Quiz</h4>
 
                 <h6>All Done?</h6>
             </div>
@@ -27,4 +28,4 @@ const QuizLandnPg = () => {
     )
 }
 
-export default QuizLandnPg
+export default AdminLandnPage

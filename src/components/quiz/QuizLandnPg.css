@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
 }
 
 .abc411{
@@ -29,6 +28,25 @@
     align-items: center;
     font-size: 1.5rem;
     margin: 20px 0;
+}
+
+.logout__btn{
+    color: rgba(6, 6, 158, 0.562);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto' sans-serif;
+    background-color: rgba(255, 255, 255, 0.575);
+    padding: .9rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 7px 8px 2px;
+    outline: none;
+}
+
+.logout__btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(6, 6, 158, 0.562);
 }
 
 
