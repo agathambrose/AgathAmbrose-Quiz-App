@@ -4,6 +4,8 @@ import setAuthKey from "../../../utils/setAuthKey";
 import history from "../../../utils/history";
 import toast from "react-hot-toast";
 
+
+
 export const registerUser = createAsyncThunk("user/registerUser", (user) => {
   axios
     .post("https://hasquiz-api.herokuapp.com/api/auth/register", user)
@@ -11,6 +13,7 @@ export const registerUser = createAsyncThunk("user/registerUser", (user) => {
       console.log({ ...response });
       console.log(response.data.message);
       if (response.status === 201) {
+
         toast.success("Registration Successful! Kindly Login");
         history.push("/login");
       }

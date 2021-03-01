@@ -5,7 +5,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { RiHome3Fill } from "react-icons/ri";
 import { IoMdTrash } from "react-icons/io";
 import { RiTimerFill } from "react-icons/ri";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import "./Admin.css";
 import { TimerModal } from "./TimerModal";
 import axios from "axios";
@@ -78,7 +78,7 @@ export const Admin = () => {
       </div>
 
       <Header />
-
+            <Toaster position = 'top-center'/>
       <section style={{ marginTop: "30px" }}>
         <div
           style={{

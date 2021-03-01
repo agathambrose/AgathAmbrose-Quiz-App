@@ -29,11 +29,8 @@ const RegisterSchema = Yup.object().shape({
 
 const Register = () => {
   let dispatch = useDispatch();
-  //const [regLoading, setRegLoading] = useState(false);
-  const { loading } = useSelector((state) => state.user);
-  // console.log(loading?"true":"false")
-
-  const spinner = loading ? (
+  const [loginLoading, setLoginLoading] = useState(false);
+  const spinner = loginLoading ? (
     <div>
       <Spinner
         animation="border"
@@ -56,8 +53,9 @@ const Register = () => {
         validationSchema={RegisterSchema}
         onSubmit={async (NEWREG) => {
           console.log(NEWREG);
+          setLoginLoading(true);
           const resultAction = await dispatch(registerUser(NEWREG));
-          //setRegLoading = (true);
+          setLoginLoading(true);
           unwrapResult(resultAction);
         }}
       >
