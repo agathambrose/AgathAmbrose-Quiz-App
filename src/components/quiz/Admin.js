@@ -67,7 +67,7 @@ export const Admin = () => {
                 }}
                 >
                 
-                <Link to = '/quiz-landing-page'>
+                <Link to = '/admin-landing-page'>
                 
                 <IoIosArrowRoundBack 
                 style = {{
