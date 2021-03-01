@@ -1,14 +1,15 @@
-.home__page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url(../../assets/undraw_team_work_k80m.svg) no-repeat center left fixed;
-    min-height: 100vh;
-    position: relative;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: contain;
+.home__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../../assets/undraw_team_work_k80m.svg) no-repeat center left
+    fixed;
+  min-height: 100vh;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: contain;
 }
 
 /* .home__page::before{
@@ -21,70 +22,69 @@
     left: 0px;
 } */
 
-.logo{
-    display: flex;
-    justify-content: center;
-    font-size: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.664);
-    border-radius: 5px;
+.logo {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.664);
+  border-radius: 5px;
 }
 
-.wlkm__area{
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+.wlkm__area {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
-.login__btn, .reg__btn{
-    color: rgba(6, 6, 158, 0.562);
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: 'Roboto' sans-serif;
-    background-color: rgba(255, 255, 255, 0.575);
-    padding: .9rem 1.5rem;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 5px 7px 8px 2px;
-    outline: none;
+.login__btn,
+.reg__btn {
+  color: rgba(6, 6, 158, 0.562);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Roboto" sans-serif;
+  background-color: rgba(255, 255, 255, 0.575);
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 7px 8px 2px;
+  outline: none;
 }
 
-.reg__btn{
-    margin-left: 5px;
+.reg__btn {
+  margin-left: 5px;
 }
 
-.login__btn:hover{
-    cursor: pointer;
-    color: white;
-    background-color: rgba(6, 6, 158, 0.562);
+.login__btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(6, 6, 158, 0.562);
 }
 
-.reg__btn:hover{
-    cursor: pointer;
-    color: white;
-    background-color: rgba(6, 6, 158, 0.562);
+.reg__btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(6, 6, 158, 0.562);
 }
-
 
 /* ______________TABLET VIEW_____________ */
-@media only screen and (min-width: 600px){
-    .home__page{
-        align-items: center;
-    }
+@media only screen and (min-width: 600px) {
+  .home__page {
+    align-items: center;
+  }
 }
 
-
 /* ______________DESKTOP VIEW_____________ */
-@media only screen and (min-width: 748px){
-    .home__page{
-        align-items: flex-end;
-    }
+@media only screen and (min-width: 748px) {
+  .home__page {
+    align-items: flex-end;
+  }
 
-    .logo{
-        font-size: 3.6rem;
-        min-width: 40%;
-    }
+  .logo {
+    font-size: 3.6rem;
+    min-width: 40%;
+  }
 
-    .wlkm__area{
-        min-width: 38%;
-    }
+  .wlkm__area {
+    min-width: 38%;
+  }
 }

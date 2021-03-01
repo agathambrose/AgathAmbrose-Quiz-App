@@ -1,66 +1,63 @@
-.wlkm__area{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.wlkm__area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.abc411{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
-    min-width: 10%;
+.abc411 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 8px 3px rgb(206, 205, 205);
+  min-width: 10%;
 }
 
-.wlkm_phr{
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-    margin: 20px 0;
-    
+.wlkm_phr {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  margin: 20px 0;
 }
 
-.quiz__lnk{
-    align-items: center;
-    font-size: 1.5rem;
-    margin: 20px 0;
+.quiz__lnk {
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 20px 0;
 }
 
-.logout__btn{
-    color: rgba(6, 6, 158, 0.562);
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: 'Roboto' sans-serif;
-    background-color: rgba(255, 255, 255, 0.575);
-    padding: .9rem 1.5rem;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 5px 7px 8px 2px;
-    outline: none;
+.logout__btn {
+  color: rgba(6, 6, 158, 0.562);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Roboto" sans-serif;
+  background-color: rgba(255, 255, 255, 0.575);
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 7px 8px 2px;
+  outline: none;
 }
 
-.logout__btn:hover{
-    cursor: pointer;
-    color: white;
-    background-color: rgba(6, 6, 158, 0.562);
+.logout__btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(6, 6, 158, 0.562);
 }
-
 
 /* _______________TABLET VIEW ___________ */
-@media only screen and (min-width: 600px){
-    .abc411{
-        min-width: 30%;
-    }
+@media only screen and (min-width: 600px) {
+  .abc411 {
+    min-width: 30%;
+  }
 }
 
-
 /* _______________ DESKTOP VIEW ___________ */
-@media only screen and (min-width: 748px){
-    .abc411{
-        min-width: 60%;
-    }
+@media only screen and (min-width: 748px) {
+  .abc411 {
+    min-width: 60%;
+  }
 }

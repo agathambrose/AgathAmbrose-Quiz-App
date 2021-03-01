@@ -30,7 +30,7 @@ const QuizData = ({ question, setAnswers, userAnswers }) => {
             borderRadius: "10px",
             margin: "0 30px",
             backgroundColor: "rgb(219, 218, 218)",
-            padding: '20px'
+            padding: "20px",
           }}
         >
           <h5>{question.question}</h5>
@@ -48,7 +48,7 @@ const QuizData = ({ question, setAnswers, userAnswers }) => {
                     });
                   }}
                 >
-                  <input 
+                  <input
                     type="radio"
                     id={answer.id}
                     name={answer.questionId}
