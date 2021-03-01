@@ -133,7 +133,7 @@ export const Admin = () => {
                   options.map((option, index) => (
                   <span key={index} className="form-check d-flex align-items-center">
                   <input 
-                      type="radio" id="answers" className="form-check-input mb-3 p-3" style={{ width: '30px'}} onClick={(e) => setRadioValue(e.target.value)} value={radioValue} 
+                      type="radio" name = 'options' id="answers" className="form-check-input mb-3 p-3" style={{ width: '30px'}} onClick={(e) => setRadioValue(e.target.value)} value={radioValue} 
                   />
                   <label htmlFor="answers" value ={option} className="pl-3">{option}</label>
                   </span>
